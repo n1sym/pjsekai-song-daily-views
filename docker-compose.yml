@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  ruby:
+    build: .
+    container_name: youtube-api
+    environment:
+      API_KEY: '${API_KEY}'
+    volumes:
+      - .:/myapp
