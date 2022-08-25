@@ -32,5 +32,24 @@ module Util
         csv << ["date","count"]
       end
     end
+
+    def get_all_video_data_hash
+      hash = {}
+      videolist = CSV.read("data/videolist.csv")
+      videolist.shift # header del
+      videolist.each do |row|
+        # video_id,title,published_at,default_thumbnail_url,large_thumbnail_url
+        video_id = row[0]
+        title = row[1]
+        published_at = Date.parse(row[2]).to_s
+        thumbnail = row[3] 
+        hash[video_id] = {
+          title: title,
+          date: published_at,
+          thumbnail: thumbnail
+        }
+      end
+      hash
+    end
   end
 end
