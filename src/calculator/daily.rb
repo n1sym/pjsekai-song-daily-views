@@ -1,9 +1,6 @@
 require './src/calculator.rb'
-require './src/util/video.rb'
 
 class Calculator::Daily < Calculator
-  include Util::Video
-
   def exec
     today = Date.today.to_s
     hash = get_all_video_data_hash()

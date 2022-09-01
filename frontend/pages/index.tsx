@@ -3,7 +3,9 @@ import Head from 'next/head'
 import { Box, Container, Heading, Flex } from '@chakra-ui/react'
 import { Layout } from "../components/Layout"
 import latestDailyData from '../data/latest_daily.json'
+import latestWeeklyData from '../data/latest_weekly.json'
 import { ResultTable } from '../components/ResultTable'
+import { LinerGraph } from '../components/LinerGraph'
 
 const siteTitle = "pjsekai-daily-ranking"
 
@@ -17,6 +19,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <LinerGraph data={latestWeeklyData}></LinerGraph>
         <ResultTable data={latestDailyData}></ResultTable>
       </main>
     </Layout>

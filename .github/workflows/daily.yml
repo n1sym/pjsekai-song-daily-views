@@ -17,7 +17,9 @@ jobs:
       - name: run ruby
         run: ruby main.rb
       - name: copy file
-        run: cp ./data/latest_daily.json ./frontend/data
+        run: |
+          cp ./data/latest_daily.json ./frontend/data
+          cp ./data/latest_weekly.json ./frontend/data
       - name: git setting
         run: |
           git config user.name github-actions
