@@ -6,7 +6,7 @@ class Calculator::Weekly < Calculator
 
     # 1週間以内にtop10入りしたvideoリストを作成
     in_weekly_ranking_videos = {}
-    (Date.parse("2022-08-25")..today).each do |day|
+    ((today - 6)..today).each do |day|
       #next if day == Date.today
       csv = CSV.read("data/daily/#{day.to_s}.csv")
       (1..10).each do |num|
