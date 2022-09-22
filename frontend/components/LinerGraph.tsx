@@ -22,7 +22,8 @@ ChartJS.register(
 
 export function LinerGraph({ data }: { data: any }) {
   const options = {
-    responsive: true,
+    responsive: false,
+    maintainAspectRatio: false,
     interaction: {
       //mode: 'index' as const,
       intersect: false,
@@ -126,7 +127,7 @@ export function LinerGraph({ data }: { data: any }) {
 
   return (
     <>
-      <Line options={options} data={genGraphData(data)} />
+      <Line options={options} width={980} height={400} data={genGraphData(data)} />
     </>
   )
 }

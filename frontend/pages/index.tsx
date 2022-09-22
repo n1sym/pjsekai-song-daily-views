@@ -19,7 +19,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <LinerGraph data={latestWeeklyData}></LinerGraph>
+        <Box mt={4} overflowX={{base:"auto", sm:"auto", md: "auto"}}>
+          <LinerGraph data={latestWeeklyData}></LinerGraph>
+        </Box>
         <ResultTable data={latestDailyData}></ResultTable>
       </main>
     </Layout>
