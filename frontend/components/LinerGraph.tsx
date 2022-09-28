@@ -45,6 +45,9 @@ export function LinerGraph({ data }: { data: any }) {
       y: {
         reverse: true,
         max: 14,
+      },
+      x: {
+        reverse: true,
       }
     }
   };
