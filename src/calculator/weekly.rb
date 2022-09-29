@@ -3,10 +3,11 @@ require './src/calculator.rb'
 class Calculator::Weekly < Calculator
   def exec
     today = Date.today
+    before_one_months_date = today - 31
 
-    # 1週間以内にtop10入りしたvideoリストを作成
+    # 1カ月以内にtop10入りしたvideoリストを作成
     in_weekly_ranking_videos = {}
-    ((today - 6)..today).each do |day|
+    (before_one_months_date = today..today).each do |day|
       #next if day == Date.today
       csv = CSV.read("data/daily/#{day.to_s}.csv")
       (1..10).each do |num|
@@ -15,7 +16,7 @@ class Calculator::Weekly < Calculator
       end
     end
     
-    before_one_months_date = today - 31
+    
     (before_one_months_date..today).each do |day|
       #next if day == Date.today
       csv = CSV.read("data/daily/#{day.to_s}.csv")
