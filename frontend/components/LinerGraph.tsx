@@ -44,7 +44,7 @@ export function LinerGraph({ data }: { data: any }) {
     scales: {
       y: {
         reverse: true,
-        max: 14,
+        max: 10,
       },
       x: {
         reverse: true,
@@ -92,6 +92,13 @@ export function LinerGraph({ data }: { data: any }) {
       "rgba(155, 159, 64, 0.2)",
       "rgba(175, 192, 192, 0.2)",
       "rgba(153, 12, 255, 0.2)",
+      "rgba(25, 99, 132, 0.2)",
+      "rgba(54, 162, 35, 0.2)",
+      "rgba(2, 206, 86, 0.2)",
+      "rgba(75, 19, 192, 0.2)",
+      "rgba(153, 102, 25, 0.2)",
+      "rgba(25, 159, 64, 0.2)",
+      "rgba(155, 99, 12, 0.2)",
     ]
     const borderColor = [
       "rgba(255, 99, 132, 0.6)",
@@ -108,6 +115,13 @@ export function LinerGraph({ data }: { data: any }) {
       "rgba(155, 159, 64, 0.6)",
       "rgba(175, 192, 192, 0.6)",
       "rgba(153, 12, 255, 0.6)",
+      "rgba(25, 99, 132, 0.6)",
+      "rgba(54, 162, 35, 0.6)",
+      "rgba(2, 206, 86, 0.6)",
+      "rgba(75, 19, 192, 0.6)",
+      "rgba(153, 102, 25, 0.6)",
+      "rgba(25, 159, 64, 0.6)",
+      "rgba(155, 99, 12, 0.6)",
     ]
     
     const datasets: any = []
@@ -130,7 +144,7 @@ export function LinerGraph({ data }: { data: any }) {
 
   return (
     <>
-      <Line options={options} width={980} height={400} data={genGraphData(data)} />
+      <Line options={options} width={980} height={340} data={genGraphData(data)} />
     </>
   )
 }

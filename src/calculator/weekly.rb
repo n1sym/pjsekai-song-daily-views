@@ -16,7 +16,6 @@ class Calculator::Weekly < Calculator
       end
     end
     
-    
     (before_one_months_date..today).each do |day|
       #next if day == Date.today
       csv = CSV.read("data/daily/#{day.to_s}.csv")
