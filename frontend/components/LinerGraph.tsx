@@ -99,6 +99,8 @@ export function LinerGraph({ data }: { data: any }) {
       "rgba(153, 102, 25, 0.2)",
       "rgba(25, 159, 64, 0.2)",
       "rgba(155, 99, 12, 0.2)",
+      "rgba(15, 199, 12, 0.2)",
+      "rgba(155, 9, 123, 0.2)",
     ]
     const borderColor = [
       "rgba(255, 99, 132, 0.6)",
@@ -122,6 +124,8 @@ export function LinerGraph({ data }: { data: any }) {
       "rgba(153, 102, 25, 0.6)",
       "rgba(25, 159, 64, 0.6)",
       "rgba(155, 99, 12, 0.6)",
+      "rgba(15, 199, 12, 0.6)",
+      "rgba(155, 9, 123, 0.6)",
     ]
     
     const datasets: any = []
