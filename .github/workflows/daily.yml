@@ -1,8 +1,6 @@
 name: Scrape 1
 on: 
   workflow_dispatch:
-  schedule:
-    - cron: '0 15 * * *' # 0時更新
 jobs:
   backend:
     name: ruby
